@@ -44,13 +44,15 @@ if(isset($_GET['id'])){
 <body>
     <div class="container fundo">
     <?php require_once "../menu.php"; ?>
+   
         <div class="fundo-conteudo">
         <div class="container">
                 <fieldset>
                     <legend>Editar Categoria</legend>
-                    <form  method="POST" action="">
+                    <form  method="POST" action="salvar.php">
                         <label for="">Nome da Categoria</label>
-                        <input type="text" name="nome" class="form-control">
+                        <input type="text" name="nome" class="form-control" value="<?php echo $categoria['nome']?>"/><br/>
+                        <input type="hidden" name="id" class="fomr-control" value="<?php echo $id['id']?>">
                         <button class="btn btn-success">Salvar</button>
                     </form>
                 </fieldset>
