@@ -67,8 +67,11 @@ if($sql->rowCount() > 0){
 
                         <label>id_categoria</label>
                         <select name="id_categoria" class="form-control">
-                            <option value="2">cafe</option>
-                            <option value="1">arroz</option>
+                            <option value="" disabled selected>Selecione uma categoria</option>
+                            <?php foreach ($categorias as $categoria):?>
+                            <option value="<?php echo $categoria['id']?>"><?php echo $categoria['nome']?></option>
+                           
+                            <?php endforeach;?>
                         </select>
 
                         <label>data_validade</label>
