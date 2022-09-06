@@ -54,6 +54,7 @@ if (count($_POST) > 0) {
                         <label for="">Nome da Categoria</label>
                         <input type="text" name="nome" class="form-control">
                         <button class="btn btn-success">Salvar</button>
+                        <a href="registros.php" class="btn btn-warning">Voltar</a>
                     </form>
                 </fieldset>
                 <div class="row">
@@ -73,7 +74,8 @@ if (count($_POST) > 0) {
                                 <td>
                             
                                     <a href="./categorias/editar.php?id=<?php echo $categoria['id']?>" class="btn btn-warning">Editar</a>
-                                    
+                                     
+                                   
                                 </td>
                             </tr>
                         <?php endforeach; ?>  

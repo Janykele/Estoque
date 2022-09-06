@@ -29,20 +29,7 @@ $dados = $sql->fetchALL();
 
 
 <div class="container fundo">
-    <div class="fundo-menu">
-    <a href="novo_produto.php">
-        <div class="botao-menu">
-            <img src="./img/mais.png" alt="" srcset=""/>
-        </div>
-        </a>
-    <a href="busca.php">
-        <div class="botao-menu">
-            <img src="./img/lupa.png" alt="">
-        </div>
-    </a>
-   
-    
-    </div>
+    <?php require "menu.php"?>
     <div class="fundo-conteudo">
         <fieldset>
            
@@ -73,6 +60,7 @@ $dados = $sql->fetchALL();
                                 <a href="excluir.php?id=<?php echo $dado['id']?>" class="btn btn-danger">Excluir</a>
                                 <a href="editar.php?id=<?php echo $dado['id']?>" class="btn btn-warning">Editar</a>
                             </td>
+                            <button></button>
                         </tr>
                     <?php endforeach; ?>    
                 </tbody>

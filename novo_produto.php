@@ -23,6 +23,17 @@ if (count($_POST) > 0) {
     }
 }
 
+$categorias = array();
+
+$sql = "SELECT * FROM categoria";
+$sql = $db->prepare($sql);
+$sql->execute();
+
+if($sql->rowCount() > 0){
+
+    $categorias = $sql->fectchAll();
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -55,7 +66,10 @@ if (count($_POST) > 0) {
                         <input type="text" class="form-control" name="nome"/>
 
                         <label>id_categoria</label>
-                        <input type="text" class="form-control" name="id_categoria"/>
+                        <select name="id_categoria" class="form-control">
+                            <option value="2">cafe</option>
+                            <option value="1">arroz</option>
+                        </select>
 
                         <label>data_validade</label>
                         <input type="date" class="form-control" name="data_validade"/>

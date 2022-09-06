@@ -76,7 +76,7 @@ if (count($_POST) > 0) {
 
                         <br /><a href="index.php" class="btn btn-warning">Voltar</a>
 
-                        <button type="submit" class="btn btn-success">Salvar</button>
+                        <button type="submit" class="btn btn-success">Voltar</button>
                     </form>
                 </fieldset>
             </div>

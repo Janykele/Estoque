@@ -36,20 +36,7 @@ $dados = $sql->fetchALL();
 
 
 <div class="container fundo">
-    <div class="fundo-menu">
-    <a href="novo-usuario.php">
-        <div class="botao-menu">
-            <img src="./img/mais.png" alt="" srcset=""/>
-        </div>
-        </a>
-    <a href="busca.php">
-        <div class="botao-menu">
-            <img src="./img/lupa.png" alt="">
-        </div>
-    </a>
-   
-    
-    </div>
+    <?php require "menu.php"?>
     <div class="fundo-conteudo">
         <h4>Buscar Registros</h4>
         <form>
@@ -59,6 +46,7 @@ $dados = $sql->fetchALL();
                 </div>
                 <div class="col-sm=6">
                     <button type="submit" class="btn btn-primary">Buscar</button>
+                   
                 </div>
             </div>
         </form>
@@ -87,11 +75,12 @@ $dados = $sql->fetchALL();
                                 <a href="editar.php?id=<?php echo $dado['id']?>" class="btn btn-warning">Editar</a>
                             </td>
                         </tr>
+                        
                     <?php endforeach; ?>    
                 </tbody>
             </table>
     </div>
 </div>
-
+                
 </body>
 </html>

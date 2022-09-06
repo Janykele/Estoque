@@ -90,7 +90,7 @@ if($sql){
 
                         <br /><a href="registros.php" class="btn btn-warning">Voltar</a>
 
-                        <button type="submit" class="btn btn-success">Salvar</button>
+                        <button type="submit" class="btn btn-success">Voltar</button>
                     </form>
                 </fieldset>
             </div>
