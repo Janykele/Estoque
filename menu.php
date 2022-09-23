@@ -22,7 +22,7 @@
                     <img src="<?php echo $url?>img/foto.png" alt="">
                 </div>
             </a>
-            <a href="<?php echo $url?>novo_produto.php">
+            <a href="<?php echo $url?>./produtos/listar.php">
                 <div class="botao-menu">
                     <img src="<?php $url?>img/regis.png" alt="">
                 </div>

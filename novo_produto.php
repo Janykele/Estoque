@@ -19,7 +19,7 @@ if (count($_POST) > 0) {
     //print_r($sql->errorInfo());exit;
 
     if ($sql) {
-        header("Location: index.php");
+        header("Location:/produtos/listar.php");
     }
 }
 
