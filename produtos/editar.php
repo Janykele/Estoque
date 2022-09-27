@@ -1,8 +1,8 @@
 <?php
 require_once "../config.php";
 global $db;
-$produtos = array();
 
+$produtos = array();
 $id= $_GET['id'];
 
 $sql ="SELECT * FROM produtos WHERE id = :id";
@@ -16,19 +16,19 @@ $produto = $sql->fetch();
 
 
 if(isset($_POST['nome'])){
-    $id = ($_POST['nome']);
-
-    $sql = "UPDATE produtos SET nome= :nome WHERE id= :id";
+    $nome= ($_POST['nome']);
+    $data_validade = $_POST['data_validade'];
+    $id_categoria = $_POST['id_categoria'];
+    
+    $sql = "UPDATE produtos SET nome= :nome, id_categoria= :id_categoria WHERE id= :id";
     $sql = $db->prepare($sql);
     $sql->bindValue(":id", $id);
-    $sql->bindValue(":nome");
+    $sql->bindValue(":nome", $nome);
+    $sql->bindValue(":id_categoria", $id_categoria);
     $sql->execute();
-
-    if($sql->rowCount() > 0) {
-        $produtos = $sql->fetch();
-    }
-
-
+    //echo '<pre>';
+    //print_r($sql->errorInfo());exit;
+    header("location: listar.php");
 }
     $categorias = array();
 
@@ -40,7 +40,7 @@ if(isset($_POST['nome'])){
 
     
 
-
+   
 ?>
 
 <!DOCTYPE html>

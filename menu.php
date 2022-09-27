@@ -14,7 +14,7 @@
 
             <a href="<?php echo $url?>nova-categoria.php">
                 <div class="botao-menu">
-                    <img src="<?php echo $url?>img/lupa.png" alt="">
+                    <img src="<?php echo $url?>img/cat.png" alt="">
                 </div>
             </a>  
             <a href="<?php echo $url?>registros.php">

@@ -53,8 +53,8 @@ if(isset($_GET['id'])){
                         <label for="">Nome da Categoria</label>
                         <input type="text" name="nome" class="form-control" value="<?php echo $categoria['nome']?>"/><br/>
                         <input type="hidden" name="id" class="fomr-control" value="<?php echo $id['id']?>">
-                        <button class="btn btn-success">Salvar</button>
                         <button class="btn btn-success">Voltar</button>
+                        <button class="btn btn-warning">Salvar</button>
                     </form>
                 </fieldset>
         </div>
